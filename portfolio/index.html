@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Arif Rashid - Personal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      background-color: rgb(10, 10, 27);
+      color: white;
+      font-family: "Poppins", sans-serif;
+    }
+
+    /* Navbar */
+    nav {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      height: 90px;
+      background-color: rgb(28, 28, 91);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    nav ul {
+      display: flex;
+      transition: 0.3s ease-in-out;
+    }
+
+    nav ul li {
+      list-style: none;
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: rgb(118, 190, 199);
+    }
+
+    /* Hamburger Menu */
+    .menu-toggle {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+    }
+
+    .menu-toggle div {
+      width: 25px;
+      height: 3px;
+      background-color: white;
+      margin: 4px 0;
+      transition: 0.3s;
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2rem;
+      color: rgb(118, 190, 199);
+      margin-bottom: 20px;
+    }
+
+    /* Home Section */
+    .firstsection {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .leftsection {
+      width: 300px;
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+    }
+
+    .leftsection h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    .span {
+      color: purple;
+    }
+
+    .resume {
+      margin-top: 20px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: purple;
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #800080;
+    }
+
+    .rightsection img {
+      width: 100%;
+      max-width: 400px;
+      height: auto;
+    }
+
+    /* About Section */
+    .about p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    /* Projects Section */
+    .projects {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .project-card {
+      background-color: rgb(28, 28, 91);
+      padding: 20px;
+      border-radius: 15px;
+      flex: 1 1 250px;
+      transition: 0.3s;
+    }
+
+    .project-card:hover {
+      transform: translateY(-5px);
+    }
+
+    /* Contact Section */
+    .contact p {
+      margin-bottom: 10px;
+    }
+
+    .contact a {
+      color: rgb(118, 190, 199);
+      text-decoration: none;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: rgb(28, 28, 91);
+      margin-top: 30px;
+      font-size: 0.9rem;
+    }
+
+    /* Responsive Navbar */
+    @media(max-width: 768px) {
+      nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: rgb(28, 28, 91);
+        position: absolute;
+        top: 90px;
+        left: 0;
+        text-align: center;
+      }
+
+      nav ul.show {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: flex;
+      }
+
+      .firstsection {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .leftsection,
+      .rightsection {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <nav>
+      <div class="logo">My Portfolio</div>
+      <div class="menu-toggle" id="menu-toggle">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+      <ul id="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Home Section -->
+  <section id="home" class="firstsection">
+    <div class="leftsection">
+      <h1>Hi, My name is <span class="span">Arif Rashid</span> </h1>
+      <p>and I am a passionate Web Developer</p>
+      <div class="resume">
+        <a href="../portfolio/resume.png" class="btn" target="_blank">View Resume</a>
+      </div>
+    </div>
+    <div class="rightsection">
+      <img src="../portfolio/web.png" alt="Web Development Image">
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m <strong>Arif Rashid</strong>, a passionate web developer with a love for creating clean and user-friendly websites.
+      I have experience with <strong>HTML, CSS, and JavaScript</strong>, and I am continuously learning to improve my front-end and back-end development skills.
+      My goal is to contribute to meaningful projects, grow as a developer, and help businesses create engaging web experiences.
+      Outside coding, I enjoy exploring new technologies and solving challenging problems.
+    </p>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <div class="projects">
+      <div class="project-card">
+        <h3>Portfolio Website</h3>
+        <p>A personal portfolio website to showcase my projects and skills.</p>
+      </div>
+      <div class="project-card">
+        <h3>Calculator App</h3>
+        <p>A web-based calculator built using HTML, CSS, and JavaScript.</p>
+      </div>
+      <div class="project-card">
+        <h3>Tic Tac Toe Game</h3>
+        <p>An interactive Tic Tac Toe game built with JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <h2>Contact Me</h2>
+    <p>Email: <a href="mailto:arifrashid88999@gmail.com">arifrashid88999@gmail.com</a></p>
+    <p>Phone: +91 9682156068</p>
+ 
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Arif Rashid | All Rights Reserved
+  </footer>
+
+  <!-- Script for Responsive Navbar -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+
+    menuToggle.addEventListener('click', () => {
+      navLinks.classList.toggle('show');
+    });
+  </script>
+
+</body>
+</html>
